@@ -33,7 +33,7 @@
 	<!--LOGO-->
 	<a id="logo" href="/"><img src="{% static 'images/logo.png' %}" alt="Speed Barter" /></a>
 	<!--DESCRIPTION-->
-	<h2 id="description">A modern bartering platform</h2>
+	<h2 id="description" >(BETA)</h2>
 	<!--NAVIGATION MENU-->
 	<div id="navigation">
 		<ul id="dropmenu" class="menu">
@@ -78,7 +78,17 @@
       	jQuery("#footer").prepend('<div class="markerNav" title="Prev" id="prevMarker">&lsaquo;</div><div id="markers"></div><div class="markerNav" title="Next" id="nextMarker">&rsaquo;</div><div id="mapTypeContainer"><div id="mapStyleContainer"><div id="mapStyle" class="satellite"></div></div><div id="mapType" title="Map Type" class="satellite"></div></div><div class="zoomControl" title="Zoom Out" id="zoomOut"><img src="{% static 'images/zoomOut.png' %}" alt="-" /></div><div class="zoomControl" title="Zoom In" id="zoomIn"><img src="{% static 'images/zoomIn.png' %}" alt="+" /></div>');
     }    
         jQuery('body').prepend("<div id='target'></div>");
-        gMap.gmap3();
+        gMap.gmap3({
+            map:{
+                options:{
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    mapTypeControl: false,
+                    navigationControl: false,
+                    scrollwheel: false,
+                    streetViewControl: false
+                }
+            }
+        });
         var initialPosition;
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(function(position) {
@@ -118,7 +128,7 @@
 	<div id="socialStuff">
 		<a class="socialicon" id="facebookIcon" href="#"  title="Facebook" rel="nofollow"></a>
         <a class="socialicon" id="twitterIcon" href="#" title="Follow on Twitter" rel="nofollow"></a>
-        <a class="socialicon" id="linkedinIcon" href="www.linkedin.com/pub/siddharth-seth/58/301/927" title="LinkedIn" rel="nofollow"></a>
+        <a class="socialicon" id="linkedinIcon" href="http://www.linkedin.com/pub/siddharth-seth/58/301/927" title="LinkedIn" rel="nofollow"></a>
         <!--
         <a class="socialicon" id="rssIcon" href="#"  title="Subscribe via RSS" rel="nofollow"></a>
         <a class="socialicon" id="vimeoIcon" href="#" title="Vimeo" rel="nofollow"></a>
