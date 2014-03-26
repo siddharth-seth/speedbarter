@@ -20,11 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '@zys*mgk!wi_17+jaq-r24s8snkw3#q#x8fvy+!^m&mn3xdh@&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    ".speedbarter.com",
+]
 
 
 # Application definition
@@ -43,7 +46,8 @@ INSTALLED_APPS = (
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
+    'speedbarter.disable.DisableCSRF',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -82,3 +86,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'C:\Users\Anant\SkyDrive\Projects\speedbarter\web_module\static'
+# Template files
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
