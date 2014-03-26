@@ -189,8 +189,9 @@ a#logo img {vertical-align: middle;}
 }
 #footer:before {border-top: 1px solid #2c2c2c;border-top: 1px solid rgba(255,255,255,.05); content:""; position: absolute; top: 0; left: 0; right:0; bottom:0; z-index: 0;}
 
-.widgetsToggle {
-	height: 40px; 
+.logoutLink, .widgetsToggle {
+    padding: 0px 10px;
+    height: 40px;
 	margin-left: -1px;
 	text-align: center;
 	line-height: 40px;

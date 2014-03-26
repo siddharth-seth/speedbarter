@@ -1,0 +1,108 @@
+<div id="main" class="ui-draggable ui-resizable" style="display: block;">
+            <div id="moveNotice" style="display: none;"></div>
+            <div id="handle"></div>
+            <div id="closeBox"></div>
+
+            <h2 class="entrytitle">About</h2>
+
+            <!--BREADCRUMBS-->
+            <div id="crumbs"><a href="#">Home</a> &nbsp;/&nbsp; <span class="current">About</span></div>
+
+            <!--PAGE CONTENT-->
+            <div class="entry">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat libero et libero semper eu
+                    elementum odio rutrum. Fusce elementum mi nec urna tristique laoreet. Vestibulum magna massa,
+                    volutpat et pellentesque quis, pellentesque tincidunt turpis. Vestibulum vel est arcu, ut eleifend
+                    sem. Aliquam lectus mi, commodo id tempus eu, volutpat sit amet massa. Sed ultricies porttitor
+                    mauris id vulputate. </p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat libero et libero semper eu
+                    elementum odio rutrum. Fusce elementum mi nec urna tristique laoreet. Vestibulum magna massa,
+                    volutpat et pellentesque quis, pellentesque tincidunt turpis. Vestibulum vel est arcu, ut eleifend
+                    sem. Aliquam lectus mi, commodo id tempus eu, volutpat sit amet massa. Sed ultricies porttitor
+                    mauris id vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat libero
+                    et libero semper eu elementum odio rutrum. Fusce elementum mi nec urna tristique laoreet. Vestibulum
+                    magna massa, volutpat et pellentesque quis, pellentesque tincidunt turpis. Vestibulum vel est arcu,
+                    ut eleifend sem. Aliquam lectus mi, commodo id tempus eu, volutpat sit amet massa. Sed ultricies
+                    porttitor mauris id vulputate. </p>
+            </div>
+            <!--end entry-->
+
+            <!--COMMENTS (NOT FUNCTIONAL)-->
+            <div id="commentToggle" class="toggleButton closed"
+                 style="padding-left: 8px; background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);"><span>+</span>2
+                Comments
+            </div>
+            <div class="clear" id="commentsection">
+
+                <ol class="commentlist">
+                    <li class="comment">
+                        <div class="comment-body">
+                            <div class="comment-author">
+                                <img alt="" src="images/avatar.jpg" class="avatar avatar-32 photo">
+                                <cite class="fn">themolitor</cite> <span class="says">says:</span>
+                            </div>
+                            <div class="commentmetadata">July 7, 2011 at 10:42 pm</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat libero et libero
+                                semper eu elementum odio rutrum. Fusce elementum mi nec urna tristique laoreet.
+                                Vestibulum magna massa, volutpat et pellentesque quis, pellentesque tincidunt
+                                turpis.</p>
+                        </div>
+                    </li>
+                    <li class="comment">
+                        <div class="comment-body">
+                            <div class="comment-author">
+                                <img alt="" src="images/avatar.jpg" class="avatar avatar-32 photo">
+                                <cite class="fn">themolitor</cite> <span class="says">says:</span>
+                            </div>
+                            <div class="commentmetadata">July 7, 2011 at 10:42 pm</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat libero et libero
+                                semper eu elementum odio rutrum. Fusce elementum mi nec urna tristique laoreet.
+                                Vestibulum magna massa, volutpat et pellentesque quis, pellentesque tincidunt
+                                turpis.</p>
+                        </div>
+                    </li>
+                </ol>
+                <!--end commentlist-->
+
+                <div id="respond">
+                    <h3>Leave a Reply</h3>
+
+                    <form action="#" method="post" id="commentform">
+                        <p>
+                            <input type="text" name="author" id="author" value="" size="22" tabindex="1"
+                                   aria-required="true">
+                            <label for="author">
+                                <small>Name (required)</small>
+                            </label>
+                        </p>
+                        <p>
+                            <input type="text" name="email" id="email" value="" size="22" tabindex="2"
+                                   aria-required="true">
+                            <label for="email">
+                                <small>Email (required)</small>
+                            </label>
+                        </p>
+                        <p>
+                            <input type="text" name="url" id="url" value="" size="22" tabindex="3">
+                            <label for="url">
+                                <small>Website</small>
+                            </label>
+                        </p>
+                        <p><textarea name="comment" id="comment" tabindex="4"></textarea></p>
+
+                        <p>
+                            <input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+                            <input type="hidden" name="comment_post_ID" value="56" id="comment_post_ID">
+                            <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                        </p>
+                    </form>
+                </div>
+                <!--end respond-->
+            </div>
+            <!--end commentsection-->
+            <div class="ui-resizable-handle ui-resizable-e"></div>
+            <div class="ui-resizable-handle ui-resizable-s"></div>
+            <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"
+                 style="z-index: 1001;"></div>
+        </div>
